@@ -602,3 +602,194 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 36ms (Views: 34.1ms)
 
 
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" ORDER BY "coins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" ORDER BY "coins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+Started GET "/" for ::1 at 2019-11-08 15:18:52 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 195ms (Views: 188.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 17:09:20 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 168ms (Views: 163.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?nome=teste" for ::1 at 2019-11-08 17:09:28 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"teste"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?nome=teste" for ::1 at 2019-11-08 17:10:39 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"teste"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?nome=jose" for ::1 at 2019-11-08 17:11:09 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"jose"}
+Started GET "/?nome=jose" for ::1 at 2019-11-08 17:11:19 -0300
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.5ms)
+
+
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"jose"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 18.8ms)
+
+
+Started GET "/?nome=teste" for ::1 at 2019-11-08 17:11:19 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"teste"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 31.9ms)
+
+
+Started GET "/?nome=teste" for ::1 at 2019-11-08 17:11:20 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"teste"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.5ms)
+
+
+Started GET "/?nome=test" for ::1 at 2019-11-08 17:11:23 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"test"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.6ms)
+
+
+Started GET "/?nome=jose" for ::1 at 2019-11-08 17:11:28 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"nome"=>"jose"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 17:11:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 17:20:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (188.2ms)
+Completed 500 Internal Server Error in 193ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `menu' for #<#<Class:0x00007fb5e41d6ce8>:0x00007fb5e88ef080>):
+    4: 
+    5: <p>Seu nome: <strong><%= @nome %></strong></p>
+    6: <p>Seu ambiente está em: <strong><%= env_rails %></strong></p>
+    7: <%= render menu %>
+  
+app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___2105008524998155729_70209597776360'
+Started GET "/" for ::1 at 2019-11-08 17:20:57 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 24.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 18:02:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 156ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2019-11-08 18:02:35 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/adm
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  Rendered coins/index.html.erb within layouts/adm (26.8ms)
+Completed 200 OK in 67ms (Views: 55.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:49:07 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 113ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2019-11-25 15:03:59 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/adm
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  Rendered coins/index.html.erb within layouts/adm (11.4ms)
+Completed 200 OK in 37ms (Views: 28.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/coins" for ::1 at 2019-11-25 15:04:15 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/adm
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  Rendered coins/index.html.erb within layouts/adm (8.0ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-26 11:28:47 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.5ms)
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 130ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2019-11-26 11:28:49 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/adm
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  Rendered coins/index.html.erb within layouts/adm (16.4ms)
+Completed 200 OK in 64ms (Views: 54.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/coins/1" for ::1 at 2019-11-26 11:28:51 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering coins/show.html.erb within layouts/adm
+  Rendered coins/show.html.erb within layouts/adm (3.2ms)
+Completed 200 OK in 42ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins/1" for ::1 at 2019-11-26 11:28:57 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering coins/show.html.erb within layouts/adm
+  Rendered coins/show.html.erb within layouts/adm (1.0ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
