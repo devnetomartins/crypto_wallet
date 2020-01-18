@@ -11,11 +11,13 @@ namespace :dev do
     end
   end
 
-  def show_spinner(msg)
-    spinner = TTY::Spinner.new("[:spinner] #{msg}")
-    spinner.auto_spin
-    yield
-    spinner.success('(Feito!)')
-  end
+  private
+
+    def show_spinner(msg)
+      spinner = TTY::Spinner.new("[:spinner] #{msg}")
+      spinner.auto_spin
+      yield
+      spinner.success('(Feito!)')
+    end
 
 end
