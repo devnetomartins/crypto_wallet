@@ -5,15 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+spinner = TTY::Spinner.new("[:spinner] Cadastrando Moedas")
+spinner.auto_spin
+coins = [
+            {
+                description: "Bitcoin",
+                acronym: "BTC",
+                url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG16.png"},
+            {
+                description: "Ethereum",
+                acronym: "ETH",
+                url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+            }
+        ]
 
-Coin.create!(
-    description: "Bitcoin",
-    acronym: "BTC",
-    url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG16.png"
-)
-
-Coin.create!(
-    description: "Ethereum",
-    acronym: "ETH",
-    url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
-)
+coins.each do |coin|
+    Coin.find_or_create_by!(coin)
+end
+spinner.success('(Feito!)')
