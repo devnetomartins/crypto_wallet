@@ -1,4 +1,5 @@
 pt-BR:
+  actual_locale: Português do Brasil
   activerecord:
     models:
       coin: Moedas

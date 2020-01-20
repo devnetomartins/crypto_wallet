@@ -1,7 +1,4 @@
 module ApplicationHelper
-    def locale
-        I18n.locale == :en ? ("Estados Unidos"):("Português do Brasil")
-    end
     def env_rails
         if Rails.env.development?
             "Desenvolvimento"
