@@ -5,8 +5,8 @@ namespace :dev do
       show_spinner("Apagando DB") { %x(rails db:drop) }
       show_spinner("Criando DB") { %x(rails db:create) }
       show_spinner("Migrando DB") { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     else
       puts "Você não está em ambiente de desenvolvimento"
     end
@@ -17,13 +17,16 @@ namespace :dev do
     show_spinner("Cadastrando moedas") do
       coins = [
                   {
-                      description: "Bitcoin",
-                      acronym: "BTC",
-                      url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG16.png"},
+                    description: "Bitcoin",
+                    acronym: "BTC",
+                    url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG16.png",
+                    mining_type: MiningType.find_by(acronym: "PoW")
+                  },
                   {
-                      description: "Ethereum",
-                      acronym: "ETH",
-                      url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+                    description: "Ethereum",
+                    acronym: "ETH",
+                    url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png",
+                    mining_type: MiningType.find_by(acronym: "PoW")
                   }
               ]
 
