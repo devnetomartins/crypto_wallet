@@ -1,0 +1,24 @@
+pt-BR:
+  activerecord:
+    models:
+      coin: Moedas
+      mining_type: Tipos de Mineração
+    attributes:
+      actions:
+        create: Cadastrar
+        edit: Editar
+        view: Visualizar
+        delete: Excluir
+      coin:
+        id: ID
+        description: Nome
+        acronym: Sigla
+        url_image: Url da imagem
+        image: Imagem
+        mining_type: Tipo de Mineração
+      mining_type:
+        id: ID
+        description: Nome
+        acronym: Sigla
+  coin:
+    confirm_operation: Tem certeza desta operação?

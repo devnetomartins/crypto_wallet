@@ -30,4 +30,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      coin: Coins
+      mining_type: Mining Types
+    attributes:
+      actions:
+        create: Create
+        edit: Edit
+        view: View
+        delete: Delete
+      coin:
+        id: ID
+        description: Name
+        acronym: Acronym
+        url_image: Url Image
+        image: Image
+        mining_type: Mining Types
+      mining_type:
+        id: ID
+        description: Name
+        acronym: Acronym
+  coin:
+    confirm_operation: Are you sure about this operation?

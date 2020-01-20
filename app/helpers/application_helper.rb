@@ -1,8 +1,7 @@
 module ApplicationHelper
-    def date_br
-        Date.today.strftime("%d/%m/%Y")
+    def locale(locale)
+        I18n.locale == :en ? ("Estados Unidos"):("Português do Brasil")
     end
-
     def env_rails
         if Rails.env.development?
             "Desenvolvimento"

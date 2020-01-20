@@ -1,6 +1,7 @@
 <h1>Seja Bem-vindo</h1>
-
-<p><strong>Data:</strong><%=  date_br %></p>
+<p>O idioma usado é: <%= locale(I18n.locale) %></p>
+<p><strong>Data:</strong><%= I18n.l(Date.today) %></p>
+<p><%= I18n.t('hello') %></p>
 
 <p>Seu nome: <strong><%= @nome %></strong></p>
 <p>Seu ambiente está em: <strong><%= env_rails %></strong></p>
