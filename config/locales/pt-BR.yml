@@ -6,8 +6,12 @@ pt-BR:
     menu: "Para começar. selecione uma das opções abaixo:"
   activerecord:
     models:
-      coin: Moedas
-      mining_type: Tipos de Mineração
+      coin: 
+        one: Moeda
+        other: Moedas
+      mining_type: 
+        one: Tipo de Mineração
+        other: Tipos de Mineração
     attributes:
       actions:
         create: Cadastrar
@@ -26,4 +30,6 @@ pt-BR:
         description: Nome
         acronym: Sigla
   coin:
+    confirm_operation: Tem certeza desta operação?
+  mining_type:
     confirm_operation: Tem certeza desta operação?

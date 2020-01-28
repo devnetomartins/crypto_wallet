@@ -6,8 +6,12 @@ en:
     menu: "To start, choose an option below:"
   activerecord:
     models:
-      coin: Coins
-      mining_type: Mining Types
+      coin: 
+        one: Coin
+        other: Coins
+      mining_type: 
+        one: Mining Type
+        other: Mining Types
     attributes:
       actions:
         create: Create
@@ -26,4 +30,6 @@ en:
         description: Name
         acronym: Acronym
   coin:
+    confirm_operation: Are you sure about this operation?
+  mining_type:
     confirm_operation: Are you sure about this operation?
