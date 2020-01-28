@@ -1,7 +1,7 @@
 <div class="jumbotron">
-  <h1 class="display-4">Seja Bem-vindo</h1>
-  <p class="lead">Este é o Crypto Wallet, um app para você cadastrar e acompanhar as suas criptomoedas</p>
+  <h1 class="display-4"><%=I18n.t('welcome')%></h1>
+  <p class="lead"><%= I18n.t('messages.welcome') %></p>
   <hr class="my-4">
-  <p>Para começar. selecione uma das opções abaixo:</p>
+  <p><%= I18n.t('messages.menu') %></p>
   <%= render 'menu'%>
 </div>
