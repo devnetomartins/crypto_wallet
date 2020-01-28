@@ -4,6 +4,8 @@ en:
   messages:
     welcome: This is the Crypto Wallet, an app that you can register and keep up with your cryptocoins.
     menu: "To start, choose an option below:"
+  links:
+    back: Back
   activerecord:
     models:
       coin: 
@@ -16,7 +18,7 @@ en:
       actions:
         create: Create
         edit: Edit
-        view: View
+        show: Show
         delete: Delete
       coin:
         id: ID
@@ -31,5 +33,11 @@ en:
         acronym: Acronym
   coin:
     confirm_operation: Are you sure about this operation?
+    new: New Coin
+    editing: Editing Coin
+    showing: Showing Coin
   mining_type:
     confirm_operation: Are you sure about this operation?
+    new: New Mining Type
+    editing: Editing Mining Type
+    showing: Showing Mining Type

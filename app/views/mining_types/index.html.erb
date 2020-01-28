@@ -16,7 +16,7 @@
       <tr>
         <td><%= mining_type.description %></td>
         <td><%= mining_type.acronym %></td>
-        <td><%= link_to I18n.t('activerecord.attributes.actions.view'), mining_type %></td>
+        <td><%= link_to I18n.t('activerecord.attributes.actions.show'), mining_type %></td>
         <td><%= link_to I18n.t('activerecord.attributes.actions.edit'), edit_mining_type_path(mining_type) %></td>
         <td><%= link_to I18n.t('activerecord.attributes.actions.delete'), mining_type, method: :delete, data: { confirm: I18n.t('mining_type.confirm_operation') } %></td>
       </tr>
