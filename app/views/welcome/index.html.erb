@@ -1,13 +1,7 @@
-<p>
-    <%= link_to 'Português', root_path(locale: 'pt-BR')%>
-</p>
-<p>
-    <%= link_to 'English', root_path(locale: 'en')%>
-</p>
-<h1>Seja Bem-vindo</h1>
-<p>O idioma usado é: <%= I18n.t('actual_locale') %></p>
-<p><strong>Data:</strong><%= I18n.l(Date.today) %></p>
-
-<p>Seu nome: <strong><%= @nome %></strong></p>
-<p>Seu ambiente está em: <strong><%= env_rails %></strong></p>
-<%= render "menu" %>
+<div class="jumbotron">
+  <h1 class="display-4">Seja Bem-vindo</h1>
+  <p class="lead">Este é o Crypto Wallet, um app para você cadastrar e acompanhar as suas criptomoedas</p>
+  <hr class="my-4">
+  <p>Para começar. selecione uma das opções abaixo:</p>
+  <%= render 'menu'%>
+</div>
